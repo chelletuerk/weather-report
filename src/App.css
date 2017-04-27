@@ -16,3 +16,11 @@
 h2 {
   font-size: 50px;
 }
+
+input {
+  height: 80px;
+  width: 300px;
+  font-size: 40px;
+  margin-top: 50px;
+  text-align: center;
+}

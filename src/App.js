@@ -1,17 +1,19 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import WeatherIndex from './components/WeatherIndex'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <div className='App'>
+        <div className='App-header'>
           <h2>Weather Report</h2>
         </div>
-        <p className="App-intro">
-        </p>
+        <div className='body'>
+        <WeatherIndex />
+        </div>
       </div>
-    );
+    )
   }
 }
 
