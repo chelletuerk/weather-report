@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import WeatherIndex from './components/WeatherIndex'
+import WeatherIndexContainer from './containers/WeatherIndexContainer'
 import './App.css'
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
           <h2>Weather Report</h2>
         </div>
         <div className='body'>
-        <WeatherIndex />
+        <WeatherIndexContainer />
         </div>
       </div>
     )

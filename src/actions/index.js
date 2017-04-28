@@ -10,9 +10,10 @@ export const displaySearchedWeather = (query, payload) => {
 }
 
 export const fetchSearchedWeather = (query) => {
-  const api_key = key.api_key
-  const baseUrl = `api.openweathermap.org/data/2.5/weather?`
-  const cityQuery = `q=${query}&APPID=${api_key}`
+  // const api_key = key.api_key
+  const baseUrl = `http://api.openweathermap.org/data/2.5/weather?`
+  const cityQuery = `q=${query}&APPID=d301cab0809df8243cc8fc745840ee21`
+
   return (dispatch) => {
     fetch(`${baseUrl}${cityQuery}`)
     .then(response => response.json())

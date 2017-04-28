@@ -3,7 +3,9 @@ import { fetchSearchedWeather } from '../actions'
 import WeatherIndex from '../components/WeatherIndex'
 
 const mapStateToProps = (state) => {
-  return { weather: state.weather }
+  return {
+    weather: state.weather
+  }
 }
 
 const mapDispatchToProps = {
