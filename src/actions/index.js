@@ -27,6 +27,7 @@ export const fetchSearchedCity = (query) => {
     .then(response => response.json())
     .then((json) => {
       dispatch(displaySearchedCity(query, json))
+      dispatch(displayWeatherConditions(query, json))
       console.log(json);
     })
     .catch(err => 'err')

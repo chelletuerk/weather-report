@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
   return {
     weather: state.weather,
     searchedCity: state.weather.name,
-    weatherConditions: state.weather.weather
+    weatherConditions: state.weather.weatherConditions,
   }
 }
 
