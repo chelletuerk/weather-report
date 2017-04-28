@@ -9,7 +9,7 @@ export const displaySearchedWeather = (query, payload) => {
   }
 }
 
-const fetchSearchedWeather = (query) => {
+export const fetchSearchedWeather = (query) => {
   const api_key = key.api_key
   const baseUrl = `api.openweathermap.org/data/2.5/weather?`
   const cityQuery = `q=${query}&APPID=${api_key}`
@@ -20,11 +20,5 @@ const fetchSearchedWeather = (query) => {
       dispatch(displaySearchedWeather(query, json))
     })
     .catch(err => 'err')
-  }
-}
-
-export const fetchData = (params) => {
-  if (params.type === 'cityQuery') {
-    return fetchSearchedWeather(params.query)
   }
 }

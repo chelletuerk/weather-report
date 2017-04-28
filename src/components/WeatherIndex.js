@@ -10,17 +10,18 @@ export default class WeatherIndex extends Component {
   }
 
   handleSearch(e) {
-    this.setState({queryInput: e.target.value})
+    this.setState({queryInput: e.target.value}, () => {
+      this.props.fetchSearchedWeather({ type: 'cityQuery', query: this.state.queryInput})
+    })
   }
 
-
   render() {
-    const { fetchData } = this.props
+    const { fetchSearchedWeather } = this.props
     return (
       <div>
         <form onSubmit={(e) => {
           e.preventDefault()
-          fetchData(this.state.queryInput)
+          fetchSearchedWeather(this.state.queryInput)
         }}>
           <input
             value={this.state.queryInput}

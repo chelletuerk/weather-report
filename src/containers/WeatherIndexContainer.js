@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { fetchData } from '../actions'
+import { fetchSearchedWeather } from '../actions'
 import WeatherIndex from '../components/WeatherIndex'
 
 const mapStateToProps = (state) => {
@@ -7,7 +7,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  fetchData,
+  fetchSearchedWeather,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherIndex)
