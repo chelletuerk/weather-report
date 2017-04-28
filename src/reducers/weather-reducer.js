@@ -1,9 +1,13 @@
 const weather = (state = {}, action) => {
   switch (action.type) {
-    case 'SEARCHED_WEATHER':
+    case 'SEARCHED_CITY':
       return Object.assign({}, state, {
-        searchedWeather: action.payload.results,
+        searchedCity: action.payload.name,
        })
+    case 'WEATHER_CONDITIONS':
+    return Object.assign({}, state, {
+      weatherConditions: action.payload.weather[0].description
+    })
     default:
       return state
   }

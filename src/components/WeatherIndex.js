@@ -19,12 +19,27 @@ export default class WeatherIndex extends Component {
   }
 
   handleClick() {
-    this.props.fetchSearchedWeather(this.state.queryInput)
+    this.props.fetchSearchedCity(this.state.queryInput)
     this.setState({queryInput: ''})
+    this.loadWeather()
   }
 
+  loadWeather() {
+      let tempArray = []
+      if(this.props.weather.searchedCity) {
+      this.props.weather.searchedCity.map((e, i) => {
+        tempArray.push(
+          <ul key={ i }>
+            <li>
+              <h1>{ e.name }</h1>
+            </li>
+          </ul>
+        )
+      })}
+      return tempArray;
+    }
+
   render() {
-    console.log(this);
     return (
       <div>
           <input
@@ -37,6 +52,7 @@ export default class WeatherIndex extends Component {
               onClick={this.handleClick}
               className='submitButton'
           />
+          <ul>{this.loadWeather()}</ul>
       </div>
     )
   }

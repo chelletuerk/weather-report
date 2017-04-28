@@ -12,7 +12,10 @@ const store = createStore(
   combineReducers({ weather }),
   {
     weather: {
-      searchedWeather: [],
+      searchedCity: [],
+      weatherConditions: [],
+      weatherDescription: [],
+      timeOfSearch: [],
     },
   },
   composeEnhancers(applyMiddleware(thunk)),
