@@ -41,9 +41,9 @@ export default class WeatherIndex extends Component {
       ? (
         <div>
           <ul>
-            This is on the screen all the time: <li>{city.name}</li>
-            So is this: {this.displayCurrentCondition(city)}
-            And so it this:{<li>{city.main.temp}</li>}
+            <span>Current Conditions in <li className='city-title'>{city.name}</li></span>< br />
+            Description: {this.displayCurrentCondition(city)}<br />
+            Temperature: {<li>{city.main.temp} degrees</li>}<br />
             Date: {city.timeFetched}
           </ul>
         </div>
@@ -75,7 +75,7 @@ export default class WeatherIndex extends Component {
     if (this.state.displayHistory) {
       return (
         <div>
-          <h1>HISTORY</h1>
+          <h3>History</h3>
           {this.loadCurrentHistory()}
         </div>
       )
@@ -90,6 +90,7 @@ export default class WeatherIndex extends Component {
           onChange={this.handleSearch}
           placeholder='Enter City Name'
         />
+        <div className='buttons'>
         <Button
           text='Click for Current Weather'
           onClick={this.handleClick}
@@ -100,6 +101,7 @@ export default class WeatherIndex extends Component {
           onClick={this.handleDisplayHistory}
           className='display-history'
         />
+      </div>
         <div>{this.loadWeather(this.props.weather.searchedCity)}</div>
         {this.displayCurrentHistory()}
       </div>
