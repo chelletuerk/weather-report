@@ -16,7 +16,10 @@ export const fetchSearchedCity = (query) => {
     fetch(baseUrl + cityQuery)
       .then(response => response.json())
       .then((data) => {
-        // if (data.cod === "404") return null
+        if (data.cod === '404') {
+          alert('City Not Found')
+          return null
+        }
         dispatch(displaySearchedCity(query, data))
       })
       .catch(err => 'err')
