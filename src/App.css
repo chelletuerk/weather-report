@@ -9,7 +9,7 @@ html {
 .App-header {
   background-color: #222;
   height: 150px;
-  color: white;
+  color: #b2dfdb ;
   padding: 0;
 }
 
@@ -24,9 +24,9 @@ h2 {
 h3 {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 50px;
-  color: white;
+  color: #b2dfdb;
   font-weight: bolder;
-  border-bottom: solid white 2px;
+  border-bottom: solid #b2dfdb  2px;
   width: 200px;
   margin: 0 auto;
   margin-top: 80px;
@@ -40,18 +40,21 @@ input {
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   border-radius: 5px;
+  border: solid #b2dfdb 3px;
+  text-shadow: #b2dfdb 5px 5px 5px;
 }
 
 button {
   height: 60px;
   width: 200px;
   border-radius: 5px;
-  border-style: solid;
+  border: solid #b2dfdb 3px;
   background-color: white;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 20px;
   margin: 30px 20px;
   -webkit-transition: all 0.7s ease;
+  text-shadow: #b2dfdb 5px 5px 5px;
 }
 
 button:hover {
@@ -65,7 +68,7 @@ li {
   list-style: none;
   font-size: 35px;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: white;
+  color: #b2dfdb;
   display: inline-block;
 }
 
@@ -73,7 +76,7 @@ ul {
   list-style: none;
   font-size: 35px;
   font-family: 'Open Sans Condensed', sans-serif;
-  color: white;
+  color: #b2dfdb;
   padding: 0;
   margin-top: 0;
 }
