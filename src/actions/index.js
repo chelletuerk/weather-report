@@ -1,5 +1,4 @@
 import fetch from 'isomorphic-fetch'
-// const key = require('../secret')
 
 export const displaySearchedCity = (query, payload) => {
   return {
@@ -9,27 +8,17 @@ export const displaySearchedCity = (query, payload) => {
   }
 }
 
-export const displayWeatherConditions = (query, payload) => {
-  return {
-    type: 'WEATHER_CONDITIONS',
-    query,
-    payload,
-  }
-}
-
 export const fetchSearchedCity = (query) => {
-  // const api_key = key.api_key
   const baseUrl = `http://api.openweathermap.org/data/2.5/weather?`
-  const cityQuery = `q=${query}&APPID=d301cab0809df8243cc8fc745840ee21`
+  const cityQuery = `q=${query}&APPID=d301cab0809df8243cc8fc745840ee21&units=imperial`
 
   return (dispatch) => {
-    fetch(`${baseUrl}${cityQuery}`)
-    .then(response => response.json())
-    .then((json) => {
-      dispatch(displaySearchedCity(query, json))
-      dispatch(displayWeatherConditions(query, json))
-      console.log(json);
-    })
-    .catch(err => 'err')
+    fetch(baseUrl + cityQuery)
+      .then(response => response.json())
+      .then((data) => {
+        // if (data.cod === "404") return null
+        dispatch(displaySearchedCity(query, data))
+      })
+      .catch(err => 'err')
   }
 }

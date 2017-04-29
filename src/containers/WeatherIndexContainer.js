@@ -5,8 +5,8 @@ import WeatherIndex from '../components/WeatherIndex'
 const mapStateToProps = (state) => {
   return {
     weather: state.weather,
-    searchedCity: state.weather.name,
-    weatherConditions: state.weather.weatherConditions,
+    searchedCity: state.weather,
+    currentHistory: state.weather.currentHistory
   }
 }
 

@@ -10,7 +10,7 @@ class App extends Component {
           <h2>Weather Report</h2>
         </div>
         <div className='body'>
-        <WeatherIndexContainer />
+          <WeatherIndexContainer />
         </div>
       </div>
     )

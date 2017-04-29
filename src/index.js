@@ -9,20 +9,17 @@ import weather from './reducers/weather-reducer'
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
-  combineReducers({ weather }),
-  {
+  combineReducers({ weather }), {
     weather: {
       searchedCity: [],
-      weatherConditions: [],
-      weatherDescription: [],
-      timeOfSearch: [],
+      currentHistory: [],
     },
   },
   composeEnhancers(applyMiddleware(thunk)),
 )
 ReactDOM.render(
   <Provider store={store}>
-  <App />
-</Provider>,
+    <App />
+  </Provider>,
   document.getElementById('root')
 )
