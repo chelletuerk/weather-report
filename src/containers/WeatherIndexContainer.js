@@ -1,15 +1,17 @@
 import { connect } from 'react-redux'
-import { fetchSearchedWeather } from '../actions'
+import { fetchSearchedCity } from '../actions'
 import WeatherIndex from '../components/WeatherIndex'
 
 const mapStateToProps = (state) => {
   return {
-    weather: state.weather
+    weather: state.weather,
+    searchedCity: state.weather,
+    currentHistory: state.weather.currentHistory
   }
 }
 
 const mapDispatchToProps = {
-  fetchSearchedWeather,
+  fetchSearchedCity,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherIndex)
