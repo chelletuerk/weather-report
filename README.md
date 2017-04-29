@@ -9,7 +9,7 @@
 
 *Since the api only has `http` endpoints, if heroku redirects to `https` please change back to plain-text `http`*
 
-![](http://i.imgur.com/e1Occq9.png)
+![](http://i.imgur.com/UVDLFgQ.png)
 
 * Clone down repository
 * If you use yarn, feel free to `yarn install && yarn start`
