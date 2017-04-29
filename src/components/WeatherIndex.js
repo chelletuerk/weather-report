@@ -44,7 +44,7 @@ export default class WeatherIndex extends Component {
             This is on the screen all the time: <li>{city.name}</li>
             So is this: {this.displayCurrentCondition(city)}
             And so it this:{<li>{city.main.temp}</li>}
-
+            Date: {city.timeFetched}
           </ul>
         </div>
       )
