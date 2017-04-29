@@ -5,5 +5,5 @@
 ### city name searched, time of search, and previous search history.
 
 * Clone down repository
-* Run npm install
-* Run npm start
+* If you use yarn, feel free to `yarn install && yarn start`
+* Otherwise `npm install && npm start`
